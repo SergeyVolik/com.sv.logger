@@ -31,26 +31,26 @@ namespace SV
     public class CustomLogger
     {
 
-        public static ILogger Instance = new DefaultLogger();
+        public static ILogger Default = new DefaultLogger();
         public const string DedSymbol = "EnableLogger";
 
         [Conditional(DedSymbol)]
         public static void Log(string str)
         {
-            Instance.Log(str);
+            Default.Log(str);
         }
 
         [Conditional(DedSymbol)]
         public static void LogWarning(string str)
         {
-            Instance.LogWarning(str);
+            Default.LogWarning(str);
 
         }
 
         [Conditional(DedSymbol)]
         public static void LogError(string str)
         {
-            Instance.LogError(str);
+            Default.LogError(str);
         }
 
        
